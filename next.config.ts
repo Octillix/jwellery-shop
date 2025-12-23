@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Disable telemetry to avoid trace file permission issues
+  reactStrictMode: true,
 };
 
 export default nextConfig;

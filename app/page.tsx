@@ -8,58 +8,59 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-screen flex items-center pt-16 sm:pt-20">
-        {/* Background Image - starts after header */}
-        <div className="absolute top-16 sm:top-20 left-0 right-0 z-0 w-full h-[125%]">
+      <section className="relative overflow-hidden min-h-screen flex items-center">
+        {/* Background Image - starts after header, fills section */}
+        <div className="absolute top-16 sm:top-20 md:top-24 lg:top-[132px] left-0 right-0 bottom-0 z-[1] w-full">
         <Image
             src="/lan1.png"
             alt="Exquisite Jewellery Collection"
-            fill
+            width={1920}
+            height={1080}
           priority
             quality={100}
             unoptimized={false}
-            className="object-cover w-full h-full animate-fade-in-scale [animation-delay:0.1s]"
+            className="object-cover w-full h-full sm:h-[140%] md:h-[150%] lg:h-[160%] animate-fade-in-scale [animation-delay:0.1s]"
             sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'right center' }}
+            style={{ objectFit: 'cover', objectPosition: 'center right' }}
           />
-          {/* Overlay for better text readability - minimal on mobile to show image, stronger on desktop */}
-          <div className="absolute left-0 top-0 bottom-0 w-[60%] sm:w-[70%] md:w-[60%] lg:w-[50%] bg-gradient-to-r from-background/40 via-background/10 to-transparent sm:from-background sm:via-background/85 md:via-background/70 lg:via-background/60"></div>
+          {/* Overlay for better text readability - responsive gradient */}
+          <div className="absolute left-0 top-0 bottom-0 w-full sm:w-[75%] md:w-[65%] lg:w-[55%] xl:w-[50%] bg-gradient-to-r from-background/60 via-background/30 to-transparent sm:from-background/80 sm:via-background/50 sm:to-transparent md:from-background md:via-background/70 md:to-transparent lg:from-background lg:via-background/60 lg:to-transparent"></div>
         </div>
 
-        <div className="container relative z-10 px-5 sm:px-6 md:px-8 mx-auto w-full">
-          <div className="max-w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl">
+        <div className="container relative z-10 px-4 sm:px-5 md:px-6 lg:px-8 mx-auto w-full pt-16 sm:pt-20 md:pt-24 lg:pt-[105px] pb-12 sm:pb-16 md:pb-20">
+          <div className="w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
             {/* Mobile-First Text Content */}
-            <div className="flex flex-col space-y-5 sm:space-y-6 md:space-y-7 text-center sm:text-left py-8 sm:py-0">
-              {/* Badge - Mobile Optimized */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 backdrop-blur-md text-primary border border-primary/30 shadow-sm w-fit sm:mx-0 mx-auto animate-fade-in-up [animation-delay:0.2s]">
-                <Sparkles className="h-4 w-4 animate-pulse" />
-                <span className="text-xs sm:text-sm font-semibold">Exquisite Handcrafted Jewellery</span>
+            <div className="flex flex-col space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-7 text-center sm:text-left py-6 sm:py-8 md:py-0 w-full">
+              {/* Badge - Responsive */}
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary/15 backdrop-blur-md text-primary border border-primary/30 shadow-sm w-fit sm:mx-0 mx-auto animate-fade-in-up [animation-delay:0.2s]">
+                <Sparkles className="h-4 w-4 sm:h-4 sm:w-4 animate-pulse flex-shrink-0" />
+                <span className="text-xs xs:text-sm sm:text-sm font-semibold whitespace-nowrap">Exquisite Handcrafted Jewellery</span>
               </div>
 
-              {/* Main Heading - Mobile Optimized */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] sm:leading-[1.2]">
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-fade-in-up [animation-delay:0.4s] inline-block animate-gradient block mb-1">
+              {/* Main Heading - Responsive */}
+              <h1 className="text-4xl xs:text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.1] sm:leading-[1.15] md:leading-[1.2] break-words">
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-fade-in-up [animation-delay:0.4s] inline-block animate-gradient block mb-0.5 sm:mb-1 break-words">
                   Timeless Elegance
                 </span>
-                <span className="text-foreground animate-fade-in-up [animation-delay:0.6s] inline-block block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                <span className="text-foreground animate-fade-in-up [animation-delay:0.6s] inline-block block text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl break-words">
                   For Every Moment
                 </span>
-          </h1>
+              </h1>
 
-              {/* Description - Mobile Optimized */}
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/90 leading-relaxed max-w-full sm:max-w-lg animate-fade-in-up [animation-delay:0.8s] font-normal">
+              {/* Description - Responsive */}
+              <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-xl text-foreground leading-relaxed sm:leading-relaxed md:leading-relaxed max-w-full sm:max-w-lg md:max-w-xl animate-fade-in-up [animation-delay:0.8s] font-normal break-words overflow-wrap-anywhere drop-shadow-sm">
                 Discover our curated collection of premium jewellery, meticulously crafted with precision and passion. 
-                From stunning engagement rings to elegant necklaces, find the perfect piece that reflects your unique style and celebrates life's precious moments.
+                From stunning engagement rings to elegant necklaces, find the perfect piece that reflects your unique style and celebrates life&apos;s precious moments.
               </p>
 
-              {/* CTA Buttons - Mobile Optimized */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-3 sm:pt-4 md:justify-start justify-center animate-fade-in-up [animation-delay:1s]">
+              {/* CTA Buttons - Responsive */}
+              <div className="flex flex-col xs:flex-row gap-2.5 sm:gap-3 md:gap-4 pt-2 sm:pt-3 md:pt-4 md:justify-start justify-center animate-fade-in-up [animation-delay:1s]">
                 <Button 
                   asChild 
                   size="lg" 
-                  className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-5 md:py-6 w-full sm:w-auto rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90"
+                  className="text-sm xs:text-base sm:text-base md:text-lg px-6 xs:px-7 sm:px-8 py-4 xs:py-5 sm:py-5 md:py-6 w-full xs:w-auto rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90"
                 >
-                  <Link href="/collections" className="flex items-center justify-center">
+                  <Link href="/collections" className="flex items-center justify-center whitespace-nowrap">
                     Explore Collections
                   </Link>
                 </Button>
@@ -67,25 +68,25 @@ export default function Home() {
                   asChild 
                   variant="outline" 
                   size="lg" 
-                  className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-5 md:py-6 w-full sm:w-auto rounded-lg font-semibold border-2 hover:bg-accent/10 transition-all duration-300"
+                  className="hidden sm:flex text-sm xs:text-base sm:text-base md:text-lg px-6 xs:px-7 sm:px-8 py-4 xs:py-5 sm:py-5 md:py-6 w-full xs:w-auto rounded-lg font-semibold border-2 hover:bg-accent/10 transition-all duration-300 whitespace-nowrap"
                 >
                   <Link href="/about">Learn More</Link>
                 </Button>
               </div>
 
-              {/* Trust Indicators - Mobile Optimized */}
-              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-5 md:pt-6 animate-fade-in-up [animation-delay:1.2s]">
-                <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-foreground/80 hover:text-primary transition-colors duration-300">
-                  <Award className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                  <span className="font-medium">Certified Quality</span>
+              {/* Trust Indicators - Responsive */}
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3 md:gap-4 lg:gap-6 pt-3 sm:pt-4 md:pt-5 lg:pt-6 animate-fade-in-up [animation-delay:1.2s]">
+                <div className="flex items-center gap-1.5 sm:gap-1.5 md:gap-2 px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur-sm border border-border/50 text-xs xs:text-sm sm:text-sm text-foreground hover:text-primary transition-colors duration-300 shadow-sm">
+                  <Award className="h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                  <span className="font-semibold whitespace-nowrap">Certified Quality</span>
                 </div>
-                <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-foreground/80 hover:text-primary transition-colors duration-300">
-                  <Heart className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                  <span className="font-medium">Lifetime Warranty</span>
+                <div className="flex items-center gap-1.5 sm:gap-1.5 md:gap-2 px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur-sm border border-border/50 text-xs xs:text-sm sm:text-sm text-foreground hover:text-primary transition-colors duration-300 shadow-sm">
+                  <Heart className="h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                  <span className="font-semibold whitespace-nowrap">Lifetime Warranty</span>
                 </div>
-                <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-foreground/80 hover:text-primary transition-colors duration-300">
-                  <Star className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                  <span className="font-medium">5-Star Rated</span>
+                <div className="flex items-center gap-1.5 sm:gap-1.5 md:gap-2 px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur-sm border border-border/50 text-xs xs:text-sm sm:text-sm text-foreground hover:text-primary transition-colors duration-300 shadow-sm">
+                  <Star className="h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                  <span className="font-semibold whitespace-nowrap">5-Star Rated</span>
                 </div>
               </div>
             </div>
