@@ -48,32 +48,8 @@ export function Header() {
 
   return (
     <>
-      {/* Top Announcement Bar */}
-      <div className="hidden md:block fixed top-0 left-0 right-0 z-[100] bg-primary/5 border-b border-primary/10 backdrop-blur-sm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="flex items-center justify-center h-8 md:h-9 text-[10px] md:text-xs text-muted-foreground">
-            <div className="flex items-center gap-3 md:gap-4 lg:gap-6 flex-wrap justify-center">
-              <a href="tel:+15551234567" className="flex items-center gap-1.5 md:gap-2 hover:text-primary transition-colors whitespace-nowrap">
-                <Phone className="h-3 w-3 md:h-3.5 md:w-3.5 flex-shrink-0" />
-                <span className="hidden lg:inline">+1 (555) 123-4567</span>
-                <span className="lg:hidden">(555) 123-4567</span>
-              </a>
-              <span className="text-border hidden lg:inline">|</span>
-              <a href="mailto:info@ravijewellers.com" className="flex items-center gap-1.5 md:gap-2 hover:text-primary transition-colors whitespace-nowrap">
-                <Mail className="h-3 w-3 md:h-3.5 md:w-3.5 flex-shrink-0" />
-                <span className="hidden xl:inline">info@ravijewellers.com</span>
-                <span className="xl:hidden">info@ravijewellers</span>
-              </a>
-              <span className="text-border hidden lg:inline">|</span>
-              <span className="text-primary font-medium whitespace-nowrap">Free Shipping Worldwide</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Header */}
       <header 
-        className={`fixed ${isLandingPage && !isScrolled ? 'md:top-8 lg:top-9 top-0' : 'top-0'} left-0 right-0 z-[100] w-full transition-all duration-500 ${
+        className={`fixed ${isLandingPage && !isScrolled ? 'md:top-0 lg:top-0 top-0' : 'top-0'} left-0 right-0 z-[100] w-full transition-all duration-500 ${
           isScrolled || !isLandingPage 
             ? 'bg-background/98 backdrop-blur-xl shadow-lg border-b border-border/80' 
             : 'bg-background/95 backdrop-blur-lg border-b border-border/40'

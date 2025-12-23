@@ -10,7 +10,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-screen flex items-center">
         {/* Background Image - starts after header, fills section */}
-        <div className="absolute top-16 sm:top-20 md:top-24 lg:top-[132px] left-0 right-0 bottom-0 z-[1] w-full">
+        <div className="absolute top-16 sm:top-20 md:top-24 left-0 right-0 bottom-0 z-[1] w-full">
         <Image
             src="/lan1.png"
             alt="Exquisite Jewellery Collection"
@@ -34,7 +34,7 @@ export default function Home() {
               {/* Badge - Responsive */}
               <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary/15 backdrop-blur-md text-primary border border-primary/30 shadow-sm w-fit sm:mx-0 mx-auto animate-fade-in-up [animation-delay:0.2s]">
                 <Sparkles className="h-4 w-4 sm:h-4 sm:w-4 animate-pulse flex-shrink-0" />
-                <span className="text-xs xs:text-sm sm:text-sm font-semibold whitespace-nowrap">Exquisite Handcrafted Jewellery</span>
+                <span className="text-xs xs:text-sm sm:text-sm font-semibold whitespace-nowrap md:!text-black">Exquisite Handcrafted Jewellery</span>
               </div>
 
               {/* Main Heading - Responsive */}
@@ -64,29 +64,21 @@ export default function Home() {
                     Explore Collections
                   </Link>
                 </Button>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  size="lg" 
-                  className="hidden sm:flex text-sm xs:text-base sm:text-base md:text-lg px-6 xs:px-7 sm:px-8 py-4 xs:py-5 sm:py-5 md:py-6 w-full xs:w-auto rounded-lg font-semibold border-2 hover:bg-accent/10 transition-all duration-300 whitespace-nowrap"
-                >
-                  <Link href="/about">Learn More</Link>
-                </Button>
               </div>
 
               {/* Trust Indicators - Responsive */}
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3 md:gap-4 lg:gap-6 pt-3 sm:pt-4 md:pt-5 lg:pt-6 animate-fade-in-up [animation-delay:1.2s]">
-                <div className="flex items-center gap-1.5 sm:gap-1.5 md:gap-2 px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur-sm border border-border/50 text-xs xs:text-sm sm:text-sm text-foreground hover:text-primary transition-colors duration-300 shadow-sm">
+                <div className="flex items-center gap-1.5 sm:gap-1.5 md:gap-2 px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur-sm border border-border/50 text-xs xs:text-sm sm:text-sm text-foreground md:text-black hover:text-primary transition-colors duration-300 shadow-sm">
                   <Award className="h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
-                  <span className="font-semibold whitespace-nowrap">Certified Quality</span>
+                  <span className="font-semibold whitespace-nowrap md:!text-black">Certified Quality</span>
                 </div>
-                <div className="flex items-center gap-1.5 sm:gap-1.5 md:gap-2 px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur-sm border border-border/50 text-xs xs:text-sm sm:text-sm text-foreground hover:text-primary transition-colors duration-300 shadow-sm">
+                <div className="flex items-center gap-1.5 sm:gap-1.5 md:gap-2 px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur-sm border border-border/50 text-xs xs:text-sm sm:text-sm text-foreground md:text-black hover:text-primary transition-colors duration-300 shadow-sm">
                   <Heart className="h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
-                  <span className="font-semibold whitespace-nowrap">Lifetime Warranty</span>
+                  <span className="font-semibold whitespace-nowrap md:!text-black">Lifetime Warranty</span>
                 </div>
-                <div className="flex items-center gap-1.5 sm:gap-1.5 md:gap-2 px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur-sm border border-border/50 text-xs xs:text-sm sm:text-sm text-foreground hover:text-primary transition-colors duration-300 shadow-sm">
+                <div className="flex items-center gap-1.5 sm:gap-1.5 md:gap-2 px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur-sm border border-border/50 text-xs xs:text-sm sm:text-sm text-foreground md:text-black hover:text-primary transition-colors duration-300 shadow-sm">
                   <Star className="h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
-                  <span className="font-semibold whitespace-nowrap">5-Star Rated</span>
+                  <span className="font-semibold whitespace-nowrap md:!text-black">5-Star Rated</span>
                 </div>
               </div>
             </div>
@@ -433,12 +425,12 @@ export default function Home() {
                   {/* Product Info */}
                   <CardContent className="p-2 sm:p-3">
                     {/* Category */}
-                    <p className="text-[10px] sm:text-xs text-primary font-semibold uppercase tracking-wider mb-1">
+                    <p className="text-[10px] sm:text-xs text-primary md:!text-black font-semibold uppercase tracking-wider mb-1">
                       {product.category}
                     </p>
 
                     {/* Product Name */}
-                    <h3 className="text-xs sm:text-sm font-semibold text-foreground mb-1.5 group-hover:text-primary transition-colors line-clamp-2">
+                    <h3 className="text-xs sm:text-sm font-semibold text-foreground md:!text-black mb-1.5 group-hover:text-primary transition-colors line-clamp-2">
                       {product.name}
                     </h3>
 
@@ -452,7 +444,7 @@ export default function Home() {
                           />
                         ))}
                       </div>
-                      <span className="text-[10px] sm:text-xs text-muted-foreground">
+                      <span className="text-[10px] sm:text-xs text-muted-foreground md:!text-black">
                         ({product.reviews})
                       </span>
                     </div>
